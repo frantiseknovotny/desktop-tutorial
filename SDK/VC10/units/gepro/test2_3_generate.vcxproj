@@ -1,0 +1,371 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug C20|Win32">
+      <Configuration>Debug C20</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug C20|x64">
+      <Configuration>Debug C20</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release C20|Win32">
+      <Configuration>Release C20</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release C20|x64">
+      <Configuration>Release C20</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="XMLC20|Win32">
+      <Configuration>XMLC20</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="XMLC20|x64">
+      <Configuration>XMLC20</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="XML|Win32">
+      <Configuration>XML</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="XML|x64">
+      <Configuration>XML</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <SccProjectName />
+    <SccLocalPath />
+    <Keyword>MakeFileProj</Keyword>
+    <ProjectGuid>{BE441D0A-D502-BD68-2081-89965117AC77}</ProjectGuid>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Template|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Template|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='UNICODE Release|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='UNICODE Release|x64'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='UNICODE Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='UNICODE Debug|x64'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <OutDir>$(SolutionDir)\$(ProjectName)\$(Configuration)$(Platform)\</OutDir>
+    <IntDir>$(SolutionDir)\$(ProjectName)\$(Configuration)$(Platform)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug C20|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <OutDir>$(SolutionDir)\$(ProjectName)\$(Configuration)$(Platform)\</OutDir>
+    <IntDir>$(SolutionDir)\$(ProjectName)\$(Configuration)$(Platform)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <IntDir>$(SolutionDir)$(ProjectName)\$(Configuration)$(Platform)\</IntDir>
+    <OutDir>$(SolutionDir)$(ProjectName)\$(Configuration)$(Platform)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug C20|x64'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <IntDir>$(SolutionDir)$(ProjectName)\$(Configuration)$(Platform)\</IntDir>
+    <OutDir>$(SolutionDir)$(ProjectName)\$(Configuration)$(Platform)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <OutDir>$(SolutionDir)\$(ProjectName)\$(Configuration)$(Platform)\</OutDir>
+    <IntDir>$(SolutionDir)\$(ProjectName)\$(Configuration)$(Platform)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release C20|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <OutDir>$(SolutionDir)\$(ProjectName)\$(Configuration)$(Platform)\</OutDir>
+    <IntDir>$(SolutionDir)\$(ProjectName)\$(Configuration)$(Platform)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='XML|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <OutDir>$(SolutionDir)\$(ProjectName)\$(Configuration)$(Platform)\</OutDir>
+    <IntDir>$(SolutionDir)\$(ProjectName)\$(Configuration)$(Platform)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='XMLC20|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <OutDir>$(SolutionDir)\$(ProjectName)\$(Configuration)$(Platform)\</OutDir>
+    <IntDir>$(SolutionDir)\$(ProjectName)\$(Configuration)$(Platform)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <IntDir>$(SolutionDir)$(ProjectName)\$(Configuration)$(Platform)\</IntDir>
+    <OutDir>$(SolutionDir)$(ProjectName)\$(Configuration)$(Platform)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release C20|x64'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <IntDir>$(SolutionDir)$(ProjectName)\$(Configuration)$(Platform)\</IntDir>
+    <OutDir>$(SolutionDir)$(ProjectName)\$(Configuration)$(Platform)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='XML|x64'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <IntDir>$(SolutionDir)$(ProjectName)\$(Configuration)$(Platform)\</IntDir>
+    <OutDir>$(SolutionDir)$(ProjectName)\$(Configuration)$(Platform)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='XMLC20|x64'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <IntDir>$(SolutionDir)$(ProjectName)\$(Configuration)$(Platform)\</IntDir>
+    <OutDir>$(SolutionDir)$(ProjectName)\$(Configuration)$(Platform)\</OutDir>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Template|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Template|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='UNICODE Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='UNICODE Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='UNICODE Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='UNICODE Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug C20|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug C20|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release C20|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='XML|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='XMLC20|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release C20|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='XML|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='XMLC20|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='UNICODE Debug|Win32'">
+    <OutDir>.\test2_3_generate___Win32_UNICODE_Debug\</OutDir>
+    <IntDir>.\test2_3_generate___Win32_UNICODE_Debug\</IntDir>
+    <NMakeBuildCommandLine>nmake runner.cpp /A</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine>nmake runner.cpp /A </NMakeReBuildCommandLine>
+    <NMakeOutput>runner.cpp</NMakeOutput>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='UNICODE Debug|x64'">
+    <NMakeBuildCommandLine>nmake runner.cpp /A</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine>nmake runner.cpp /A </NMakeReBuildCommandLine>
+    <NMakeOutput>runner.cpp</NMakeOutput>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <NMakeBuildCommandLine>nmake runner.cpp /A</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine>nmake runner.cpp /A </NMakeReBuildCommandLine>
+    <NMakeOutput>runner.cpp</NMakeOutput>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug C20|Win32'">
+    <NMakeBuildCommandLine>nmake runner.cpp /A</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine>nmake runner.cpp /A </NMakeReBuildCommandLine>
+    <NMakeOutput>runner.cpp</NMakeOutput>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <NMakeBuildCommandLine>nmake runner.cpp /A</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine>nmake runner.cpp /A </NMakeReBuildCommandLine>
+    <NMakeOutput>runner.cpp</NMakeOutput>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug C20|x64'">
+    <NMakeBuildCommandLine>nmake runner.cpp /A</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine>nmake runner.cpp /A </NMakeReBuildCommandLine>
+    <NMakeOutput>runner.cpp</NMakeOutput>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <NMakeBuildCommandLine>nmake runner.cpp /A</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine>nmake runner.cpp /A </NMakeReBuildCommandLine>
+    <NMakeOutput>runner.cpp</NMakeOutput>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release C20|Win32'">
+    <NMakeBuildCommandLine>nmake runner.cpp /A</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine>nmake runner.cpp /A </NMakeReBuildCommandLine>
+    <NMakeOutput>runner.cpp</NMakeOutput>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='XML|Win32'">
+    <NMakeBuildCommandLine>nmake runner.cpp /A</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine>nmake runner.cpp /A </NMakeReBuildCommandLine>
+    <NMakeOutput>runner.cpp</NMakeOutput>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='XMLC20|Win32'">
+    <NMakeBuildCommandLine>nmake runner.cpp /A</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine>nmake runner.cpp /A </NMakeReBuildCommandLine>
+    <NMakeOutput>runner.cpp</NMakeOutput>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <NMakeBuildCommandLine>nmake runner.cpp /A</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine>nmake runner.cpp /A </NMakeReBuildCommandLine>
+    <NMakeOutput>runner.cpp</NMakeOutput>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release C20|x64'">
+    <NMakeBuildCommandLine>nmake runner.cpp /A</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine>nmake runner.cpp /A </NMakeReBuildCommandLine>
+    <NMakeOutput>runner.cpp</NMakeOutput>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='XML|x64'">
+    <NMakeBuildCommandLine>nmake runner.cpp /A</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine>nmake runner.cpp /A </NMakeReBuildCommandLine>
+    <NMakeOutput>runner.cpp</NMakeOutput>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='XMLC20|x64'">
+    <NMakeBuildCommandLine>nmake runner.cpp /A</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine>nmake runner.cpp /A </NMakeReBuildCommandLine>
+    <NMakeOutput>runner.cpp</NMakeOutput>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='UNICODE Release|Win32'">
+    <OutDir>.\test2_3_generate___Win32_UNICODE_Release\</OutDir>
+    <IntDir>.\test2_3_generate___Win32_UNICODE_Release\</IntDir>
+    <NMakeBuildCommandLine>nmake runner.cpp /A</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine>nmake runner.cpp /A </NMakeReBuildCommandLine>
+    <NMakeOutput>runner.cpp</NMakeOutput>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='UNICODE Release|x64'">
+    <NMakeBuildCommandLine>nmake runner.cpp /A</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine>nmake runner.cpp /A </NMakeReBuildCommandLine>
+    <NMakeOutput>runner.cpp</NMakeOutput>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="Makefile">
+      <FileType>Document</FileType>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\bin\lib\cxxtest\geproAsserts.h" />
+    <ClInclude Include="..\..\bin\lib\cxxtest\geprocxxtest.h" />
+    <ClInclude Include="S\asm.h" />
+    <ClInclude Include="S\defines.h" />
+    <ClInclude Include="S\disk.h" />
+    <ClInclude Include="S\math.h" />
+    <ClInclude Include="S\set.h" />
+    <ClInclude Include="S\smartbufs.h" />
+    <ClInclude Include="S\smartbufs_const_array.h" />
+    <ClInclude Include="S\smartbufs_static_array.h" />
+    <ClInclude Include="S\smartbufs_static_vector.h" />
+    <ClInclude Include="S\string.h" />
+    <ClInclude Include="S\string_algorithm.h" />
+    <ClInclude Include="S\tcharbuf.h" />
+    <ClInclude Include="S\test.h" />
+    <ClInclude Include="S\test_binary_find.h" />
+    <ClInclude Include="S\test_dynalib.h" />
+    <ClInclude Include="S\test_environ.h" />
+    <ClInclude Include="S\test_events.h" />
+    <ClInclude Include="S\test_exceptions.h" />
+    <ClInclude Include="S\test_g2d.h" />
+    <ClInclude Include="S\test_hexa.h" />
+    <ClInclude Include="S\test_map.h" />
+    <ClInclude Include="S\test_mtimer.h" />
+    <ClInclude Include="S\test_point.h" />
+    <ClInclude Include="S\test_rectangle.h" />
+    <ClInclude Include="S\test_std.h" />
+    <ClInclude Include="S\test_stdformat.h" />
+    <ClInclude Include="S\test_stringview.h" />
+    <ClInclude Include="S\test_tohexa.h" />
+    <ClInclude Include="S\vector.h" />
+    <ClInclude Include="S\viewtypes.h" />
+    <ClInclude Include="S\vtoa.h" />
+    <ClInclude Include="S\vtow.h" />
+    <ClInclude Include="S\windows.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\bin\lib\cxxtest\geprocxxtest.cpp" />
+    <ClCompile Include="runner.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="runner.tpl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\bin\lib\cxxtest\cxxAsserts.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

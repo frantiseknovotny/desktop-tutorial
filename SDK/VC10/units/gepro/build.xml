@@ -1,0 +1,11 @@
+<project name="units-gepro" default="all">
+    <property name="build.name" value="${ant.project.name}" />
+    <property name="build.basedir" location="${basedir}" />
+    <property name="build.bin.dir" location="${basedir}/bin" />
+    <!--property name="build.cxxtest.dir" value="${build.basedir}" />
+    <property name="build.cxxtest" value="${build.basedir}/test2" /-->
+    <property name="build.sln" value="build" />
+    <!--property name="build.sln.config.build" value="Win32 UNICODE Release" /-->
+    <!--property name="build.test_2_build" value="test2_2_build" /-->
+    <import file="${ant.home}/build.xml" />
+</project>

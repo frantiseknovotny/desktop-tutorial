@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClInclude Include="..\..\bin\Lib\gepro\_vtox.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\bin\Lib\gepro\defines.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\bin\lib\gepro\hexa.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\bin\Lib\gepro\log4wx.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\bin\Lib\gepro\math.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\bin\lib\gepro\point.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\bin\lib\gepro\point2.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\bin\Lib\gepro\psapi.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\bin\lib\gepro\rectangle.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\bin\lib\gepro\rectangle2.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\bin\Lib\gepro\shlobj.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\bin\Lib\gepro\singleton.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\bin\lib\gepro\smartbufs.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\bin\Lib\gepro\string.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\bin\Lib\gepro\tcharbuf.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\bin\Lib\gepro\types.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\bin\Lib\gepro\viewtypes.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\bin\Lib\gepro\vtoa.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\bin\Lib\gepro\vtow.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\bin\Lib\gepro\vtox.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\bin\Lib\gepro\windows.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="S\asm.h">
+      <Filter>test</Filter>
+    </ClInclude>
+    <ClInclude Include="S\defines.h">
+      <Filter>test</Filter>
+    </ClInclude>
+    <ClInclude Include="S\disk.h">
+      <Filter>test</Filter>
+    </ClInclude>
+    <ClInclude Include="S\math.h">
+      <Filter>test</Filter>
+    </ClInclude>
+    <ClInclude Include="S\set.h">
+      <Filter>test</Filter>
+    </ClInclude>
+    <ClInclude Include="S\smartbufs.h">
+      <Filter>test</Filter>
+    </ClInclude>
+    <ClInclude Include="S\smartbufs_const_array.h">
+      <Filter>test</Filter>
+    </ClInclude>
+    <ClInclude Include="S\smartbufs_static_array.h">
+      <Filter>test</Filter>
+    </ClInclude>
+    <ClInclude Include="S\smartbufs_static_vector.h">
+      <Filter>test</Filter>
+    </ClInclude>
+    <ClInclude Include="S\string.h">
+      <Filter>test</Filter>
+    </ClInclude>
+    <ClInclude Include="S\string_algorithm.h">
+      <Filter>test</Filter>
+    </ClInclude>
+    <ClInclude Include="S\test.h">
+      <Filter>test</Filter>
+    </ClInclude>
+    <ClInclude Include="S\test_binary_find.h">
+      <Filter>test</Filter>
+    </ClInclude>
+    <ClInclude Include="S\test_events.h">
+      <Filter>test</Filter>
+    </ClInclude>
+    <ClInclude Include="S\test_exceptions.h">
+      <Filter>test</Filter>
+    </ClInclude>
+    <ClInclude Include="S\test_g2d.h">
+      <Filter>test</Filter>
+    </ClInclude>
+    <ClInclude Include="S\test_mtimer.h">
+      <Filter>test</Filter>
+    </ClInclude>
+    <ClInclude Include="S\test_point.h">
+      <Filter>test</Filter>
+    </ClInclude>
+    <ClInclude Include="S\test_rectangle.h">
+      <Filter>test</Filter>
+    </ClInclude>
+    <ClInclude Include="S\test_std.h">
+      <Filter>test</Filter>
+    </ClInclude>
+    <ClInclude Include="S\test_stdformat.h">
+      <Filter>test</Filter>
+    </ClInclude>
+    <ClInclude Include="S\tcharbuf.h">
+      <Filter>test</Filter>
+    </ClInclude>
+    <ClInclude Include="S\vector.h">
+      <Filter>test</Filter>
+    </ClInclude>
+    <ClInclude Include="S\viewtypes.h">
+      <Filter>test</Filter>
+    </ClInclude>
+    <ClInclude Include="S\vtoa.h">
+      <Filter>test</Filter>
+    </ClInclude>
+    <ClInclude Include="S\vtow.h">
+      <Filter>test</Filter>
+    </ClInclude>
+    <ClInclude Include="S\windows.h">
+      <Filter>test</Filter>
+    </ClInclude>
+    <ClInclude Include="S\test_environ.h">
+      <Filter>test</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\bin\lib\gepro\environ.h" />
+    <ClInclude Include="..\..\bin\lib\gepro\exceptions.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\bin\lib\gepro\exceptions2.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\bin\lib\gepro\exceptions3.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\bin\lib\gepro\smartbufs2.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\bin\lib\gepro\std2.h">
+      <Filter>include</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\..\bin\Lib\gepro\set">
+      <Filter>include</Filter>
+    </CustomBuild>
+    <CustomBuild Include="runner.tpl">
+      <Filter>test</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="include">
+      <UniqueIdentifier>{83985233-7ca5-41f5-88b4-1ef76d183dc3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="test">
+      <UniqueIdentifier>{4f7452a6-7ac9-4797-997a-ddf631c5adbc}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="runner.cpp">
+      <Filter>test</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
