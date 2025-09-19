@@ -1,0 +1,10 @@
+/** \mainpage
+  Dokumentace k funkcím SDK Gepro. Funkce jsou rozdìleny do skupin, které mùžete nalézt v sekci Modules. Pro vložení do projektu není zapotøebí
+  pøidávat žádnou cestu (pokud máte nastavenou cestu v globálním nastavení). Jednotlivé headery jsou potom pøístupné napø. takto
+  \code
+    #include <gepro/point.h> 
+  \endcode
+
+  Vìtšina tøíd a funkcí je vložena do namespace cz::gepro ... aby nemohlo dojít ke kolizi se jmény z jiných frameworkù.
+*/
+

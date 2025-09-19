@@ -1,0 +1,19 @@
+#ifndef   ___SDK_GEPRO_STRING
+#define   ___SDK_GEPRO_STRING
+#if defined(DEBUG_PREPROC)
+  #pragma message(__FILE__ "(1) : debug included")
+#endif
+#if _MSC_VER > 1000
+  #pragma once
+#endif
+#ifndef ___SDK_GEPRO_STRING_H
+  #include "string.h"
+#endif
+namespace std {
+inline bool starts_with(const std::string& s,const char* x) {
+  cz::gepro::constchars q(s.c_str(),s.length());
+  return q.starts_with(x);
+}
+}  // namespace std
+#endif
+  

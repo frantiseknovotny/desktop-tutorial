@@ -1,0 +1,48 @@
+#include "defverze.h"
+
+1 VERSIONINFO
+FILEVERSION VERMAJOR,VERMINOR, REVIZEHI, REVIZELO
+PRODUCTVERSION VERMAJOR+8,VERMINOR,REVIZEHI, REVIZELO
+FILEFLAGSMASK VS_FFI_FILEFLAGSMASK
+FILEFLAGS     VS_FF_PRERELEASE
+FILEOS VOS_DOS_WINDOWS32
+FILETYPE VFT_APP
+{
+ BLOCK "StringFileInfo"
+ {
+  BLOCK "040504E2"  //pridat 2 pro 1252
+  {
+   VALUE "CompanyName", CORPORATION_NAME "\000"
+   VALUE "FileDescription", PRODUCT_DESC "\000"
+   VALUE "ProductName", PRODUCT_NAME "\000\000"
+   VALUE "ProductVersion",VERTEXT " " HASPVERTXT _BUILD_TYPE "\000\000"
+   VALUE "FileVersion", VERTEXT "\000\000"
+   VALUE "InternalName", FILE_NAME "\000"
+   VALUE "OriginalFilename", FILE_NAME FILE_EXT "\000"
+   VALUE "LegalCopyright", COPYRIGHT "\0"
+#ifdef SVNCHECKOUTSINFO
+   VALUE "Comments", SVNCHECKOUTSINFO "\000"
+#endif   
+#ifdef PRODUCT_USE_LICENCES
+   VALUE "Použité licence", 
+   #ifdef WXWIDGETS_LICENCE
+     WXWIDGETS_LICENCE_URL "\r\n"
+   #endif
+   #ifdef APACHE_LICENCE
+     APACHE_LICENCE_URL "\r\n"
+   #endif
+   #ifdef BOOST_LICENCE
+     BOOST_LICENCE_URL "\r\n"
+   #endif
+     "\0"
+#endif   
+  }
+
+ }
+
+ BLOCK "VarFileInfo"
+ {
+  VALUE "Translation", 0x405, 1250  //nebo 1252
+ }
+
+}

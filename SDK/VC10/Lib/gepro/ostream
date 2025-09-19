@@ -1,0 +1,7 @@
+#ifndef __SDK_GEPRO_OSTREAM
+#define __SDK_GEPRO_OSTREAM
+#pragma warning(4:4018)
+#ifndef _OSTREAM_
+  #include <ostream>
+#endif
+#endif 

@@ -1,0 +1,31 @@
+#ifndef __STRING_VIEW_
+#define __STRING_VIEW_
+#if defined(DEBUG_PREPROC)
+#pragma message(__FILE__ "(1) : debug included")
+#endif
+#include "string.h"
+#if _MSVC_LANG >= 201703L
+#include <string_view>
+#else
+namespace std {
+class string_view : public cz::gepro::constchars {
+ public:
+  typedef cz::gepro::constchars base_type;
+  string_view() : base_type() {}
+  explicit string_view(const char* str, size_t len) : base_type(str, len) {}
+  explicit string_view(const char* str) : base_type(str) {}
+  string_view& operator=(const char* str) {
+    *this = string_view(str);
+    return *this;
+  }
+  const value_type* data() const { return c_str(); }
+  const value_type& at(size_t i) const { return *(c_str() + i); }
+};
+template <typename O>
+O& operator<<(O& o, const string_view& v) {
+  o << v.c_str();
+  return o;
+}
+};  // namespace std
+#endif
+#endif

@@ -1,0 +1,11 @@
+<project name="sdkdoc" default="build">
+   <import file="${ant.home}/ant.xml" />
+   <typedef file="${ant.home}/ext/doxygen.xml" />
+
+    <target name="build">
+        <doxygen doxygenPath="${gepro.doxygen.exe}"
+                 configFilename="doxyfile">
+            <property name="OUTPUT_DIRECTORY" value="html" />
+        </doxygen>
+    </target>
+</project>

@@ -1,0 +1,92 @@
+#ifndef  __GEPRO_MAP_
+#define  __GEPRO_MAP_
+
+#ifndef _MAP_
+  #include <map>
+#endif
+#ifndef _VECTOR_
+  #include <vector>
+#endif
+
+namespace cz {
+namespace gepro {
+/** Tøída uchovávající poøadí vložení - vector a souèasnì index - map podle klíèe K.
+  Použití všude tam kde je zapotøebí map podle klíèe, ale souèasnì je tøeba iterovat
+  podle poøadí vloøení (napø. cache selectu z DB se zadaným  ORDER BY).
+  Bez dalšího zásahu respektuje kód napsaný pùvodnì pro map.
+
+*/
+template <class K,class V>
+class mapvector {
+  public:
+    typedef K key_type;
+    typedef V value_type;
+    typedef std::map<key_type,size_t> map_keys;
+    typedef std::pair<key_type,size_t> pair_keys;
+    struct pair_type {
+      key_type first;
+      value_type second;
+      pair_type(const key_type& _key,const value_type& _val) {
+        first=_key;
+        second=_val;
+      }
+    };
+    typedef typename std::vector<pair_type> vector_type;
+    typedef typename std::vector<pair_type>::iterator iterator;
+    typedef typename std::vector<pair_type>::const_iterator const_iterator;
+    typedef const value_type& const_reference;
+
+    const_iterator begin() const {return data_.begin();}
+    const_iterator end() const {return data_.end();}
+    iterator begin() {return data_.begin();}
+    iterator end() {return data_.end();}
+    size_t size() const {return data_.size();}
+    void clear() {data_.clear();map_.clear();}
+    const key_type& getkey(size_t i) const {return data_[i].first;}
+    const value_type& getvalue(size_t i) const {return data_[i].second;}
+    iterator insert(const pair_type& _p) {
+      data_.push_back(_p);
+      std::pair<map_keys::iterator,bool> ins=map_.insert(pair_keys(_p.first,data_.size()-1));
+      if(!ins.second) return end();
+      return begin()+ins.first->second;
+    }
+    iterator insert(const key_type& _key,const value_type& _val) {
+      pair_type x(_key,_val);
+      data_.push_back(x);
+      std::pair<map_keys::iterator,bool> ins=map_.insert(pair_keys(_key,data_.size()-1));
+      if(!ins.second) return end();
+      return begin()+ins.first->second;
+    }
+    iterator find(const key_type& _key) {
+      auto it=map_.find(_key);
+      if(it==map_.end()) return data_.end();
+      return data_.begin()+it->second;
+    }
+    const_iterator find(const key_type& _key) const {
+      auto it=map_.find(_key);
+      if(it==map_.end()) return data_.end();
+      return data_.begin()+it->second;
+    }
+    size_t findindex(const key_type& _key) {
+      auto it=map_.find(_key);
+      if(it==map_.end()) return (size_t)-1;
+      return it->second;
+    }
+  protected:
+    vector_type data_;
+    map_keys map_;
+  
+};
+};
+};  // namespace cz
+
+#ifdef BOOST_STRING_PREDICATE_HPP
+#include "string_iless.h"
+namespace std {
+template <typename K,typename V>
+class imap : public map<K,V,string_iless<K> > {};
+};  // namespace std
+#endif
+
+
+#endif

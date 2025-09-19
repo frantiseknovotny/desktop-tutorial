@@ -1,0 +1,62 @@
+#ifndef   ___GEPRO_VECTOR_H
+#define   ___GEPRO_VECTOR_H
+#if defined(DEBUG_PREPROC)
+  #pragma message(__FILE__ "(1) : debug included")
+#endif
+
+#pragma warning(disable:4018 4663 4786)
+#include <vector>
+namespace cz {
+namespace gepro {
+/** Výjimka hlásící opakované vložení položky do unique_vector - pro ladící úèely
+*/
+
+#define VECTORDATA(v) v.data()
+
+class non_unigue_item:public std::exception {
+  public:
+    non_unigue_item():std::exception("non unique item") {}
+};
+
+/** Upravený vektor obsahující pouze unikátní položky - nahrazuje vs VC6 neexistující unordered_set.
+    Pro pøidání unique položky je nutno používat dùslednì metodu add!
+    Datový typ musí obsahovat bool operator==() const;
+*/
+template <class T,int esig=0>
+class unique_vector {
+    typedef std::vector<T> vector_type;
+    vector_type data;
+  public:
+    typedef typename vector_type::iterator iterator;
+    typedef typename vector_type::const_iterator const_iterator;
+    typedef typename vector_type::reference reference;
+    const_iterator begin() const {return data.begin();}
+    const_iterator end() const {return data.end();}
+    size_t size() const {return data.size();}
+    reference operator[](int i) {return data[i];}
+    const
+    /** Pøidá do vektoru položku pokud tam zatím není 
+     
+      @param v  vkládaná hodnota
+    */
+    void push_back(const T& v) {
+      const_iterator b=data.begin();
+      const_iterator e=data.end();
+      for(;b!=e;b++) {
+        if(*b==v) {
+          if(esig) throw non_unigue_item();
+          return;
+        }
+      }
+      data.push_back(v);
+    }
+    void operator+=(const unique_vector& _src) {
+      const_iterator b=_src.begin();
+      const_iterator e=_src.end();
+      for(;b!=e;b++) push_back(*b);
+    }
+};
+};//gepro
+};//cz
+#pragma warning(default:4018 4663)
+#endif

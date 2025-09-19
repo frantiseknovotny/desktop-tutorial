@@ -1,0 +1,181 @@
+#ifndef   ___SDK_GEPRO_SET_H
+#define   ___SDK_GEPRO_SET_H
+#if defined(DEBUG_PREPROC)
+  #pragma message(__FILE__ "(1) : debug included")
+#endif
+
+#pragma warning(disable:4018 4663 4786)
+#include <set>
+#ifndef max
+#define max(a,b)            (((a) > (b)) ? (a) : (b))
+#endif
+#ifndef min
+#define min(a,b)            (((a) < (b)) ? (a) : (b))
+#endif
+
+namespace cz {
+namespace gepro {
+
+/** Šablona hodnoty do std::set, kde klíè je const string setøídìný reversnì s možností dohledat 
+    nejbližší možnou shodu. Reversní setøídìní je nezbytné pro nalezení nejdelšího možného øetìzce,
+    který odpovídá hledané hodnotì. Jako klíè - K - lze použít libovolnou tøídu podporující:
+     - size() .. délka øetìzce
+     - begin() .. zaèátek øetìzce
+     - compare(const E* a,const E* b,size_t len) .. statická metoda provádìjící porovnání øetìzcù v délce len
+
+    
+    \code
+      class request:public set_key<request,int> {
+        public:
+          bool NotNull() const {return value?true:false;}
+          request(const char* _url,int _v) {
+            key=Key(_url);
+            value=_v;
+          }
+      };
+    \endcode
+*/
+template <class D,class V,class K=constchars> class set_key {
+  public:
+    typedef V Value; 
+    typedef D Derived;
+    typedef K Key; 
+  protected:
+    Key key;
+    Value value;
+  public: 
+    Derived* This() const {return (Derived*)this;}
+    bool operator<(const Derived& b) const {
+      if(key.size()==0) {
+        if(b.key.size()==0) return false;
+        return true;
+      }
+      if(b.key.size()==0) return false;
+      size_t l=min(key.size(),b.key.size());
+      int res=key.compare(key.begin(),b.key.begin(),l);
+      if(res<0) return false;
+      if(res>0) return true;
+      if(This()->NotNull()) {
+        if(key.size()>b.key.size()) return true;
+        return false;
+      }
+      return false;
+    }
+    const Value& get() const {return value;}
+    const Key& getKey() const {return key;}
+};
+/** Šablona pro std::set hodnot tvoøených klíèem ve tvaru const char* a hodnotou V
+   
+    \code
+      cz::gepro::set_of_value<int> maps;
+      cz::gepro::set_of_value<int>::set_iterator it;
+      maps.add("/PspHrbit/",2);
+      maps.add("/PspHrbit/files/",1);
+      maps.add("/PspHrbit/help",4);
+      maps.add("/PspHrbit/page",3);
+      char buf[2048];
+      maps.dump(buf,sizeof(buf));
+      _DUMP(buf)
+      int res=maps.find("/PspHrbit/files/abc.html");
+      TS_ASSERT_EQUALS(res,1)
+      it=maps.find_iterator("/PspHrbit/files/abc.html");
+      TS_ASSERT_TEXT(it->getKey().begin(),"/PspHrbit/files/")
+      TS_ASSERT_EQUALS(it->get(),1)
+    \endcode
+*/
+template <class V,class K=constchars> class set_of_value  {
+  public:
+    typedef V value_type;
+    typedef K skey;
+    class key_value : public set_key<key_value, value_type, skey> {
+     public:
+      typedef set_key<key_value, value_type, skey> base_type;
+      bool NotNull() const { return base_type::value ? true : false; }
+      key_value(const char* _url, V _translator) {
+        base_type::key = base_type::Key(_url);
+        base_type::value = _translator;
+      }
+      key_value(const K& _key, const V& _val) {
+        base_type::key = _key;
+        base_type::value = _val;
+      }
+    };
+    typedef std::set<key_value> set_value; 
+    typedef typename set_value::const_iterator set_iterator;
+    typedef typename set_value::const_iterator const_iterator;
+    const_iterator begin() const {return data.begin();}
+    const_iterator end() const {return data.end();}
+    void erase(const_iterator it) {data.erase(it);}
+  private:
+    set_value data;
+  public:
+    bool empty() const { return data.empty(); }
+   void add(const char* url, value_type v) {
+      key_value r(url,v);
+      data.insert(r);
+    }
+   void adds(const skey& _url, const value_type& _val) {
+      key_value r(_url, _val);
+      data.insert(r);
+    }
+    set_iterator find_iterator(const char* _url) const {
+      key_value r(_url,NULL);
+      return data.find(r);
+    }
+    const_iterator find_iterator_linear(const char* _url) const {
+      size_t ul = strlen(_url);
+      for (auto it = data.begin(); it != data.end();++it) {
+        size_t kl = it->getKey().size();
+        if (ul < kl) continue;
+        int r=skey::compare(_url,it->getKey().c_str(),kl);
+        if (!r) return it;
+      }
+      return data.end();
+    }
+    const_iterator find_iterator_by_value(const char* _url) const {
+      size_t ul = strlen(_url);
+      for (auto it = data.begin(); it != data.end(); ++it) {
+        size_t kl = it->get().size();
+        if (kl != ul) continue;
+        int r = skey::compare(_url, it->get().c_str(), kl);
+        if (!r) return it;
+      }
+      return data.end();
+    }
+    value_type find(const char* _url) const {
+      set_iterator i=find_iterator(_url);
+      if(i==data.end()) return NULL;
+      return i->get();
+    }
+    void erase(const value_type& v) {
+      const_iterator it=begin();
+      for(;it!=end();++it) {
+        if(it->get()==v) {
+          erase(it);
+          break;
+        }
+      }
+    }
+    void dump(char* buf,unsigned buf_size) const {
+      auto i=data.begin();
+      int l=0;
+      for(;i!=data.end();i++) {
+        l+=_snprintf_s(buf+l,buf_size-l,buf_size-l,"%d\n",i->get());
+      }
+    }
+};
+
+};//gepro
+};//cz
+
+
+#ifdef BOOST_STRING_PREDICATE_HPP
+#include "string_iless.h" 
+namespace std {
+template <typename S>
+class iset : public set<S, string_iless<S> > {};
+};
+#endif
+
+#pragma warning(default:4018 4663)
+#endif
